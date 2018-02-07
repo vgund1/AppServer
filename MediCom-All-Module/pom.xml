@@ -9,12 +9,12 @@
 	<name>MediCom-All-Module</name>
 	<description>Demo project for Spring Boot</description>
 
-	<parent>
+	<!--  <parent>
 		<groupId>com.mdhskv</groupId>
 		<artifactId>MediCom-Parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+		<relativePath/> lookup parent from repository
+	</parent> --> 
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
