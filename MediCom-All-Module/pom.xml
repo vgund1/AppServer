@@ -9,36 +9,57 @@
 	<name>MediCom-All-Module</name>
 	<description>Demo project for Spring Boot</description>
 
-	<!--  <parent>
+	<parent>
 		<groupId>com.mdhskv</groupId>
 		<artifactId>MediCom-Parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> lookup parent from repository
-	</parent> --> 
+		<relativePath/> 
+	</parent> 
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		 <skip.incremental>flase</skip.incremental>
 	</properties>
 
 
-	<build>
-		<plugins>
+
+
+	<modules>
+		<module>../MediCom-Parent</module>
+		<module>../MediCom-Common</module>
+		<module>../MediCom-Interface</module>
+		
+		<module>../MediCom-Service</module>
+	</modules>
+	<groupId>com.mdksv</groupId>
+	
+	
+	  <build>
+        <plugins>
+       
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
-	</build>
-
-
-	<modules>
-		<module>../MediCom-Common</module>
-		<module>../MediCom-Interface</module>
-		<module>../MediCom-Parent</module>
-		<module>../MediCom-Service</module>
-	</modules>
-	<groupId>com.mdksv</groupId>
-	<version>0.0.1-SNAPSHOT</version>
+	
+        
+            <plugin>
+                <groupId>net.java.maven-incremental-build</groupId>
+                <artifactId>incremental-build-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>incremental-build</goal>
+                        </goals>
+                        <configuration>
+                            <noIncrementalBuild>${skip.incremental}</noIncrementalBuild>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
