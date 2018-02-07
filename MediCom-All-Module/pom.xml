@@ -20,17 +20,12 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		 <skip.incremental>flase</skip.incremental>
+		 <skip.incremental>false</skip.incremental>
 	</properties>
-
-
-
-
 	<modules>
 		<module>../MediCom-Parent</module>
 		<module>../MediCom-Common</module>
 		<module>../MediCom-Interface</module>
-		
 		<module>../MediCom-Service</module>
 	</modules>
 	<groupId>com.mdksv</groupId>
