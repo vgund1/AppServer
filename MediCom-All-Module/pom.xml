@@ -39,4 +39,6 @@
 		<module>../MediCom-Parent</module>
 		<module>../MediCom-Service</module>
 	</modules>
+	<groupId>com.mdksv</groupId>
+	<version>0.0.1-SNAPSHOT</version>
 </project>
