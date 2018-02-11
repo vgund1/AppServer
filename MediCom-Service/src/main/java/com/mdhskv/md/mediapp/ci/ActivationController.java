@@ -14,12 +14,12 @@ import com.mdhskv.md.mediapp.bean.SubscribeMediComSericeRs;
 
 @RestController
 @RequestMapping("/activate/{version}")
-public class ActivateController{
+public class ActivationController{
 
 	@Autowired
 	ConversionService conversionService;
 	
-	private static Logger logger = LoggerFactory.getLogger(ActivateController.class);
+	private static Logger logger = LoggerFactory.getLogger(ActivationController.class);
 	@RequestMapping(method = RequestMethod.POST, value = "/subscribeMediComService")
 	public SubscribeMediComSericeRs subscribeWalletService(SubscribeMediComSericeRq req) throws Exception {
 		SubscribeMediComSericeRs response = new SubscribeMediComSericeRs();

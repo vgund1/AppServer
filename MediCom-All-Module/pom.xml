@@ -27,6 +27,9 @@
 		<module>../MediCom-Common</module>
 		<module>../MediCom-Interface</module>
 		<module>../MediCom-Service</module>
+		<module>
+			../../MediComOauthServer/oauth2-jdbc-authorization-server-war
+		</module>
 	</modules>
 	<groupId>com.mdksv</groupId>
 	
