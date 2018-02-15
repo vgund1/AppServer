@@ -25,7 +25,7 @@ public class MobileDevice implements Serializable {
 
 	private boolean rootingFlag;
 
-	private String walletId;
+	private String applicationId;
 	private String mobileId;
 
 	public MobileDevice() {
@@ -135,12 +135,13 @@ public class MobileDevice implements Serializable {
 		this.rootingFlag = rootingFlag;
 	}
 
-	public String getWalletId() {
-		return walletId;
+	
+	public String getApplicationId() {
+		return applicationId;
 	}
 
-	public void setWalletId(String walletId) {
-		this.walletId = walletId;
+	public void setApplicationId(String applicationId) {
+		this.applicationId = applicationId;
 	}
 
 	public String getMobileId() {

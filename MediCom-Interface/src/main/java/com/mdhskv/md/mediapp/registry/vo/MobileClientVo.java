@@ -12,12 +12,13 @@ import com.mdhskv.md.mediapp.common.enumtype.DisplayDensity;
 import com.mdhskv.md.mediapp.common.enumtype.MobileState;
 import com.mdhskv.md.mediapp.common.enumtype.YesOrNo;
 import com.mdhskv.md.mediapp.model.MobileDevice;
+import com.mdhskv.md.mediapp.registry.vo.MobileSessionKeyVo;
+import com.mdhskv.md.mediapp.registry.vo.PushClientId;
 
 public class MobileClientVo implements Serializable {
 	private static final long serialVersionUID = 5612275023429105796L;
 	private static transient final Logger logger = LoggerFactory.getLogger(MobileClientVo.class);
-
-	private String walletId;
+	private String applicationId;
 	private String mobileId;
 	private String customerId;
 	private int seqNum;
@@ -31,33 +32,25 @@ public class MobileClientVo implements Serializable {
 	private YesOrNo deviceAppBindingYn;
 	private String pin;
 	private boolean pinConfigured;
-	private String walletAppVersionId;
-
+	private String appVersionId;
 	private PushClientId pushCid;
-
 	private String deviceInfo;
 	private String mcsaVersion;
-	private String walletVersion;
-
+	private String appVersion;
 	private MobileDevice mobileDevice;
 	private boolean securityVerified = false;
-
 	private Calendar timeout;
-
 	private DisplayDensity desity = DisplayDensity.xhdpi;
-
 	private String mobileSubscriptionId;
-
 	private MobileSessionKeyVo sessionKey;
-
 	private String sdkInstanceId;
 
-	public String getWalletId() {
-		return walletId;
+	public String getApplicationId() {
+		return applicationId;
 	}
 
-	public void setWalletId(String walletId) {
-		this.walletId = walletId;
+	public void setApplicationId(String applicationId) {
+		this.applicationId = applicationId;
 	}
 
 	public String getMobileId() {
@@ -164,13 +157,7 @@ public class MobileClientVo implements Serializable {
 		this.pinConfigured = pinConfigured;
 	}
 
-	public String getWalletAppVersionId() {
-		return walletAppVersionId;
-	}
-
-	public void setWalletAppVersionId(String walletAppVersionId) {
-		this.walletAppVersionId = walletAppVersionId;
-	}
+	
 
 	public PushClientId getPushCid() {
 		return pushCid;
@@ -188,12 +175,22 @@ public class MobileClientVo implements Serializable {
 		this.mcsaVersion = mcsaVersion;
 	}
 
-	public String getWalletVersion() {
-		return walletVersion;
+
+
+	public String getAppVersionId() {
+		return appVersionId;
 	}
 
-	public void setWalletVersion(String walletVersion) {
-		this.walletVersion = walletVersion;
+	public void setAppVersionId(String appVersionId) {
+		this.appVersionId = appVersionId;
+	}
+
+	public String getAppVersion() {
+		return appVersion;
+	}
+
+	public void setAppVersion(String appVersion) {
+		this.appVersion = appVersion;
 	}
 
 	public MobileDevice getMobileDevice() {
@@ -250,14 +247,6 @@ public class MobileClientVo implements Serializable {
 
 	public void setSdkInstanceId(String sdkInstanceId) {
 		this.sdkInstanceId = sdkInstanceId;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public static Logger getLogger() {
-		return logger;
 	}
 
 	public String getDeviceInfo() {

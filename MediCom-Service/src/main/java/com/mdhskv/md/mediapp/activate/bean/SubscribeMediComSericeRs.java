@@ -1,5 +1,6 @@
-package com.mdhskv.md.mediapp.bean;
+package com.mdhskv.md.mediapp.activate.bean;
 
+import com.mdhskv.md.mediapp.bean.FailureCountResponse;
 import com.mdhskv.md.mediapp.model.DeviceEligibility;
 
 public class SubscribeMediComSericeRs extends FailureCountResponse {

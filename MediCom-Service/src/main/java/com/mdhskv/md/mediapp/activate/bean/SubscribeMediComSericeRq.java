@@ -1,30 +1,17 @@
-package com.mdhskv.md.mediapp.bean;
+package com.mdhskv.md.mediapp.activate.bean;
 
-import com.mdhskv.md.mediapp.mediapp.activate.bean.Patient;
 import com.mdhskv.md.mediapp.model.MobileSubscription;
 import com.mdhskv.md.mediapp.registry.vo.MobileClientVo;
 
 public class SubscribeMediComSericeRq {
-	private Patient patient;
 	private MobileClientVo mobileClient;
 
 	private MobileSubscription mobileSubscription;
-	private String walletId;
-
+	private ApplicationUser applicationUser;
+	private String applicationId;
 	private String language;
-
 	private String token;
-
 	private String sdkVersionId;
-
-	
-	public Patient getPatient() {
-		return patient;
-	}
-
-	public void setPatient(Patient patient) {
-		this.patient = patient;
-	}
 
 	public MobileClientVo getMobileClient() {
 		return mobileClient;
@@ -42,13 +29,6 @@ public class SubscribeMediComSericeRq {
 		this.mobileSubscription = mobileSubscription;
 	}
 
-	public String getWalletId() {
-		return walletId;
-	}
-
-	public void setWalletId(String walletId) {
-		this.walletId = walletId;
-	}
 
 	public String getLanguage() {
 		return language;
@@ -72,6 +52,22 @@ public class SubscribeMediComSericeRq {
 
 	public void setSdkVersionId(String sdkVersionId) {
 		this.sdkVersionId = sdkVersionId;
+	}
+
+	public String getApplicationId() {
+		return applicationId;
+	}
+
+	public void setApplicationId(String applicationId) {
+		this.applicationId = applicationId;
+	}
+
+	public ApplicationUser getApplicationUser() {
+		return applicationUser;
+	}
+
+	public void setApplicationUser(ApplicationUser applicationUser) {
+		this.applicationUser = applicationUser;
 	}
 
 }
